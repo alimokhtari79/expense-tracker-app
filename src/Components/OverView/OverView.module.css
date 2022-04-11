@@ -1,0 +1,70 @@
+.overViewContainer {
+	display: flex;
+	flex-direction: column;
+	width: 24rem;
+	/* border: 2px solid red; */
+	padding: 1rem 2rem;
+}
+
+.overViewUp {
+	margin-top: 1rem;
+}
+
+.balance {
+	font-size: 1.5rem;
+}
+
+.showForm_btn {
+	padding: 0.4rem 0.8rem;
+	background-color: #1f2732;
+	color: #fff;
+	border-radius: 0.5rem;
+}
+
+.overViewUp,
+.overViewDown {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.overViewDown {
+	justify-content: flex-start;
+	width: 20rem;
+	margin-block: 1rem;
+	gap: 1rem;
+}
+
+.overViewDown_expenseAndIncome {
+	width: 50%;
+	height: 4.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 0.7rem;
+	background-color: #1f2732;
+	border-radius: 0.5rem;
+}
+
+.expenseAndIncome_up {
+	display: flex;
+	justify-content: space-between;
+}
+
+.expenseAndIncome_icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	padding: 3px;
+}
+
+.expense_icon {
+	background-color: rgba(235, 87, 87, 0.178);
+	color: #eb5757;
+}
+
+.Income_icon {
+	background-color: rgba(111, 207, 151, 0.178);
+	color: #6fcf97;
+}

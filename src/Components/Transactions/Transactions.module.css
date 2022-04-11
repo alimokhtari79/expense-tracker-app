@@ -1,0 +1,9 @@
+.Transactions {
+	padding: 0 2rem;
+}
+
+.addTransaction {
+	font-size: 1rem;
+	margin-top: 1rem;
+	text-align: center;
+}

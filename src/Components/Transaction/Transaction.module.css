@@ -1,0 +1,25 @@
+.transaction {
+	width: 20rem;
+	padding: 0.7rem 1.2rem;
+	margin: 1rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 1rem;
+	background-color: #1f2732;
+}
+
+.transaction_desc {
+	max-width: 14rem;
+	overflow: hidden;
+}
+
+.transactionIncomeAmount {
+	color: #6fcf97;
+}
+
+.transactionExpenseAmount {
+	color: #eb5757;
+}
+
+/* expense , income */
