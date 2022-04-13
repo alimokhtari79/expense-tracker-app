@@ -33,7 +33,7 @@ const AddForm = ({ addTransaction }) => {
 	};
 
 	const successNotify = () =>
-		toast.success('Add new expense', {
+		toast.success('Add New Transaction', {
 			position: 'top-right',
 			autoClose: 3000,
 			hideProgressBar: false,

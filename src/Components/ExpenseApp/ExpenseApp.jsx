@@ -3,12 +3,25 @@ import OverView from '../OverView/OverView';
 import Transactions from '../Transactions/Transactions';
 import style from './ExpenseApp.module.css';
 const ExpenseApp = () => {
+	// -------------------State-------------------
 	const [transActions, setTransActions] = useState([]);
+	const [FilterTransactions, setFilterTransactions] = useState([]);
 	const [expense, setExpense] = useState(0);
 	const [income, setIncome] = useState(0);
+	const [selectedOptions, setSelectedOptions] = useState('All');
 
+	// -------------------State-------------------
+
+	// -------------------Handlers-------------------
 	const addTransaction = (transaction) => {
 		setTransActions([...transActions, transaction]);
+	};
+
+	const deleteHandler = (id) => {
+		const filterDeleteTransactions = transActions.filter(
+			(transaction) => transaction.id !== id
+		);
+		setTransActions(filterDeleteTransactions);
 	};
 
 	useEffect(() => {
@@ -21,7 +34,34 @@ const ExpenseApp = () => {
 		});
 		setExpense(exp);
 		setIncome(inc);
-	}, [transActions]);
+		filteredTransactions(selectedOptions.value);
+	}, [transActions, selectedOptions]);
+
+	useEffect(() => {}, [transActions]);
+
+	const filteredTransactions = (status) => {
+		switch (status) {
+			case 'Income':
+				setFilterTransactions(
+					transActions.filter((transaction) => transaction.type === 'income')
+				);
+				break;
+			case 'Expense':
+				setFilterTransactions(
+					transActions.filter((transaction) => transaction.type === 'expense')
+				);
+				break;
+			default:
+				setFilterTransactions(transActions);
+		}
+	};
+
+	const selectedHandler = (e) => {
+		const selectedStatus = e.value;
+		setSelectedOptions(e);
+		filteredTransactions(selectedStatus);
+	};
+	// -------------------Handlers-------------------
 
 	return (
 		<section>
@@ -30,7 +70,12 @@ const ExpenseApp = () => {
 				income={income}
 				addTransaction={addTransaction}
 			/>
-			<Transactions transActions={transActions} />
+			<Transactions
+				transActions={FilterTransactions}
+				onDelete={deleteHandler}
+				selectedHandler={selectedHandler}
+				selectedOptions={selectedOptions}
+			/>
 		</section>
 	);
 };

@@ -1,9 +1,12 @@
 import style from './Transaction.module.css';
 
-const Transaction = ({ transaction }) => {
+const Transaction = ({ transaction, onDelete }) => {
 	return (
 		<div className={style.transaction}>
-			<div className={style.transaction_desc}>{transaction.desc}</div>
+			<div className={style.transaction_left}>
+				<button onClick={onDelete}>delete</button>
+				<p>{transaction.desc}</p>
+			</div>
 			<div
 				className={`${
 					transaction.type === 'income'

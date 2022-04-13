@@ -1,6 +1,7 @@
 .transaction {
 	width: 20rem;
-	padding: 0.7rem 1.2rem;
+	padding: 0 1rem 0 0;
+	height: 3rem;
 	margin: 1rem 0;
 	display: flex;
 	justify-content: space-between;
@@ -9,9 +10,38 @@
 	background-color: #1f2732;
 }
 
-.transaction_desc {
+.transaction_left {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	max-width: 14rem;
+	height: 100%;
 	overflow: hidden;
+}
+
+.transaction_left p {
+	margin-left: 1rem;
+}
+
+.transaction_left button {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	height: 100%;
+	border-top-left-radius: 1rem;
+	border-bottom-left-radius: 1rem;
+	padding: 0 0.5rem;
+	color: #fff;
+	background-color: #d11a2a;
+	transform: translateX(-100%);
+	display: none;
+}
+
+.transaction:hover .transaction_left button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: translateX(0);
 }
 
 .transactionIncomeAmount {
