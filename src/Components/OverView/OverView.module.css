@@ -1,9 +1,9 @@
 .overViewContainer {
 	display: flex;
 	flex-direction: column;
-	width: 24rem;
-	/* border: 2px solid red; */
-	padding: 1rem 2rem;
+	max-width: 24rem;
+	width: 100vw;
+	padding: 1rem;
 }
 
 .overViewUp {
@@ -12,10 +12,12 @@
 
 .balance {
 	font-size: 1.5rem;
+	color: #438ef1;
 }
 
 .showForm_btn {
-	padding: 0.4rem 0.8rem;
+	padding: 0.4rem 1.5rem;
+	font-size: 0.9rem;
 	background-color: #1f2732;
 	color: #fff;
 	border-radius: 0.5rem;
@@ -29,10 +31,13 @@
 }
 
 .overViewDown {
-	justify-content: flex-start;
-	width: 20rem;
-	margin-block: 1rem;
-	gap: 1rem;
+	justify-content: space-between;
+	width: 100%;
+	margin: 1rem 0;
+}
+
+.overViewDown_Income {
+	margin-right: 2rem;
 }
 
 .overViewDown_expenseAndIncome {

@@ -1,7 +1,8 @@
 .transaction {
-	width: 20rem;
+	width: 100%;
+	max-width: 20rem;
 	padding: 0 1rem 0 0;
-	height: 3rem;
+	height: 2.5rem;
 	margin: 1rem 0;
 	display: flex;
 	justify-content: space-between;

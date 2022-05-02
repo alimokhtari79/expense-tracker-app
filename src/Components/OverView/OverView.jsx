@@ -22,7 +22,7 @@ const OverView = ({ expense, income, addTransaction }) => {
 			</div>
 
 			<div className={style.overViewDown}>
-				<div className={style.overViewDown_expenseAndIncome}>
+				<div className={`${style.overViewDown_expenseAndIncome} ${style.overViewDown_Income}`}>
 					<div className={style.expenseAndIncome_up}>
 						<p>Income</p>
 						<div
